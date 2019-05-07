@@ -1,0 +1,8 @@
+regex
+TextBlob
+networkx
+matplotlib
+TwitterAPI
+nltk
+scipy
+sklearn

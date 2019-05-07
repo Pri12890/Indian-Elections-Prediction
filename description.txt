@@ -1,0 +1,23 @@
+Description - 
+
+1. INTRODUCTION - 
+In this Twitter Sentiment analysis, I have used Twitter Data related to 2019 Indian Elections. The "BJP" and "Congress" are two major political parties competing against each other to win the Indian Elections. I have fetched tweets containing any keywords related to the Elections, either party keywords or words containing names of the leaders.  
+2. COLLECTION OF TWEETS- 
+I distributed all the tweets into different categories based on which party the tweet belongs to. (People in favor of BJP, People in favor of Congress, People against BJP, People against Congress, Neutral People who are not against any of the parties). 
+3. GRAPH CREATION AND COMMUNITY DETECTION-
+ I created a graph using neutral people as the base nodes of the graph. Plotted friends of these neutral people who fall into any of the above category of users and have tweeted in our collected data. It was interesting to see that these people(having neutral views) are connected with people with contradictory views (against both parties or in favor of one and against the other). So, I was interested in finding connections across friends of these neutral people. I sampled data by doing an intersection of people favoring BJP and against Congress, thereby categorizing them as STRONG BJP SUPPORTERS and vice versa. So, started finding friends of these strong supporters and added edges between the friends. 
+4. CLUSTERING THE USERS - 
+In clustering, I divided the graph into two clusters using Girvan Newman Algorithm for community detection. This created two communities where one cluster favored BJP strongly and the other cluster had people with neutral views.So, given the present data, concluded that people could be favoring BJP more than Congress as there is a strong support of BJP and a large part of population against Congress in the initial Graph. 
+COLOR CONVENTION USED IN GRAPH 
+In the graph, color convention has been used to reflect views of users 
+Green - represents people favoring BJP 
+Red - represents people against BJP 
+Yellow - represents people against Congress 
+Blue = represents people favoring Congress 
+Purple - represents people with Neutral Views ( i.e. have tweeted in favor of both parties) 
+
+5. CLASSIFICATION- 
+In classification, the aim was to classify the tweets as expressing positive, neutral or negative sentiments. I used sentiment.polarity to label the data. I divided the data into training and test data. Used all classifier feature settings and created a Logistic Regression classifier for each setting (as done previously in Assignment 2), computed the accuracy which came out to be 94.2% for the data classified. I used five fold cross validation to compute the accuracy of the model. 
+The accuracy after using all the settings without stop word removal setting came out to be 94.2%. So, I then used Stop words removal as a metric to improve the accuracy further. 
+Removal of stop words improved the accuracy which came out to be 95.4%. 
+

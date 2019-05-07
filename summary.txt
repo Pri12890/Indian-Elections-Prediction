@@ -1,0 +1,6 @@
+Number of users collected : 9037
+ Number of messages collected: 11566
+ Number of communities discovered: 2
+ Total number of users first community: 39 , second community : 4 
+ Number of instances for positive sentiments are 723 , negative sentiments are 292 , neutral sentiments are 1299 
+ Positive Sentiment - 1 , negative sentiment- -1, neutral sentiment- 0 
